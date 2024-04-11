@@ -2,6 +2,7 @@
 	"name": "wifi-name",
 	"version": "3.1.1",
 	"description": "Get current wifi name",
+	"types": "index.d.ts",
 	"license": "MIT",
 	"repository": "kevva/wifi-name",
 	"author": {
@@ -17,6 +18,7 @@
 	},
 	"files": [
 		"index.js",
+		"index.d.ts",
 		"lib"
 	],
 	"keywords": [
