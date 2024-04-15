@@ -1,19 +1,20 @@
 # wifi-name
 
-> Get current wifi name
+Get the current Wi-Fi name.
 
+This fork enhances [wifi-name](https://www.npmjs.com/package/wifi-name) by adding TypeScript type definitions, making it easier to be used in TypeScript projects. It also resolves compatibility issues with macOS Sonoma by updating the method used to retrieve the Wi-Fi name.
 
 ## Install
 
 ```
-$ npm install wifi-name
+$ npm install @shangzhen/wifi-name
 ```
 
 
 ## Usage
 
 ```js
-const wifiName = require('wifi-name');
+const wifiName = require('@shangzhen/wifi-name');
 
 wifiName().then(name => {
 	console.log(name);
