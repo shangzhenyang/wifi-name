@@ -1,39 +1,51 @@
 {
 	"name": "@shangzhen/wifi-name",
-	"version": "3.2.0",
+	"version": "4.0.0",
 	"description": "Get the current Wi-Fi name.",
-	"types": "index.d.ts",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/shangzhenyang/wifi-name.git"
-	},
-	"author": {
-		"name": "Kevin Mårtensson",
-		"email": "kevinmartensson@gmail.com",
-		"url": "https://github.com/kevva"
-	},
-	"engines": {
-		"node": ">=4"
-	},
+	"main": "lib/main.js",
+	"types": "lib/main.d.ts",
+	"type": "module",
 	"scripts": {
-		"test": "xo && ava"
+		"build": "tsc",
+		"lint": "eslint \"src/**/*.ts\" && prettier --check .",
+		"test": "npm run build && ava"
 	},
-	"files": [
-		"index.js",
-		"index.d.ts",
-		"lib"
-	],
 	"keywords": [
 		"name",
 		"network",
 		"wifi"
 	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/shangzhenyang/wifi-name.git"
+	},
+	"contributes": [
+		{
+			"name": "Kevin Mårtensson",
+			"email": "kevinmartensson@gmail.com",
+			"url": "https://github.com/kevva"
+		},
+		{
+			"name": "Shangzhen Yang",
+			"url": "https://github.com/shangzhenyang"
+		}
+	],
+	"license": "MIT",
+	"files": [
+		"lib"
+	],
+	"prettier": "prettier-config-rth",
 	"dependencies": {
-		"execa": "^0.7.0"
+		"execa": "^9.5.1"
 	},
 	"devDependencies": {
-		"ava": "*",
-		"xo": "*"
+		"@types/execa": "^0.9.0",
+		"@typescript-eslint/eslint-plugin": "^8.16.0",
+		"ava": "^6.2.0",
+		"eslint": "^9.15.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-config-rth": "^2.0.0",
+		"prettier": "^3.4.1",
+		"prettier-config-rth": "^1.0.0"
 	}
 }

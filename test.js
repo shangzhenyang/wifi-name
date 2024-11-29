@@ -1,10 +1,13 @@
-import test from 'ava';
-import m from '.';
+import test from "ava";
+import { getWifiName, getWifiNameSync } from "./lib/main.js";
 
-test('async', async t => {
-	t.truthy(await m());
+test("async", async (t) => {
+	const result = await getWifiName();
+	t.truthy(result);
 });
 
-test('sync', t => {
-	t.truthy(m.sync());
+test("sync", (t) => {
+	const result = getWifiNameSync();
+	console.log(result);
+	t.truthy(result);
 });
